@@ -1,19 +1,19 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-var count = 1000
-var sum = 0
+// fib returns a function that returns
+// successive Fibonacci numbers.
+func fib() func() int {
+	a, b := 0, 1
+	return func() int {
+		a, b = b, a+b
+		return a
+	}
+}
 
 func main() {
-	for i := 0; i < count; i++ {
-		switch {
-		case i%3 == 0, i%5 == 0:
-			sum += i
-			//fmt.Println(i)
-		}
-	}
-	fmt.Println(sum)
+	f := fib()
+	// Function calls are evaluated left-to-right.
+	fmt.Println(f(), f(), f(), f(), f(), f())
 }
