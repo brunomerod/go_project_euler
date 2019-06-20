@@ -2,18 +2,30 @@ package main
 
 import "fmt"
 
-// fib returns a function that returns
-// successive Fibonacci numbers.
-func fib() func() int {
-	a, b := 0, 1
-	return func() int {
-		a, b = b, a+b
+var limit, sum, result = 4000000, 0, 0
+
+//The project Euler problem considers the firts 10 numbers = 1, 2, 3, 5, 8, 13, 21, 34, 55, 89
+//This is wrong as the sequence starts with 1,1,2,3...
+//To be 1,2,3,5... just change the if to a <= 1
+func fibRec(a int) int {
+	if a < 2 {
 		return a
 	}
+	return fibRec(a-1) + fibRec(a-2)
 }
 
 func main() {
-	f := fib()
-	// Function calls are evaluated left-to-right.
-	fmt.Println(f(), f(), f(), f(), f(), f())
+	//result is not changing is the change is below neither on the samelevel as i < 4000
+	for i := 1; result < limit; i++ {
+		result := fibRec(i)
+		if result > limit {
+			break
+		}
+
+		if result%2 != 0 {
+			sum += result
+		}
+	}
+
+	fmt.Println(sum)
 }
