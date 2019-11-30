@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"math/big"
+	//	"math/big"
 )
 
-var number big = 600851475143
+var number = 600851475143
 
 func main() {
-	fmt.Println(number * 0.5)
+	fmt.Println(number / 2)
 }
