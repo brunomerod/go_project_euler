@@ -12,7 +12,6 @@ func main() {
 		switch {
 		case i%3 == 0, i%5 == 0:
 			sum += i
-			//fmt.Println(i)
 		}
 	}
 	fmt.Println(sum)
