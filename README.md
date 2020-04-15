@@ -12,5 +12,5 @@ Each folder contains the solution to each problem.
 2. Ok
 3. Ok
 4. Ok
-5. ...  
+5. Ok
 6. ...
