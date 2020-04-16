@@ -27,5 +27,4 @@ func main() {
 	} else {
 		fmt.Printf("\n%d - %d = %d\n", sum, sqr, sum-sqr)
 	}
-
 }
