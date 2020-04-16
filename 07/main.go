@@ -29,7 +29,7 @@ func main() {
 	var np int
 	fmt.Printf("The nth prime: ")
 	_, err := fmt.Scanf("%d", &np)
-	//For project Euler 1 is not a prime :(
+	//For project Euler, 1 is not a prime :(
 	for n, i := 2, 1; i <= np; n++ {
 		if isPrime(n) {
 			i++
