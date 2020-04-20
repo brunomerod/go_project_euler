@@ -42,7 +42,6 @@ func main() {
 		//If I use i = i + 20 it's really slower
 		i++
 	}
-
 	for i := 1; ; i++ {
 		for n := 1; n <= 20; n++ {
 			if i%n != 0 {
