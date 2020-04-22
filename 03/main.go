@@ -9,7 +9,7 @@ import (
 	"math/big"
 )
 
-var target int = 600851475143
+var target int = 60851475143
 var primes []int
 
 func multiplyArr(arr []int) int {

@@ -25,7 +25,7 @@ func bruteWay(found bool, a, b, c, s int) {
 //TODO:  a more mathematical aproach using Euclid's algorithm
 func main() {
 	//Brute Force Way
-	var a, b, c, s int = 0, 0, 0, 1000
+	var a, b, c, s int = 0, 0, 0, 100
 	var found bool = false
 
 	bruteWay(found, a, b, c, s)
