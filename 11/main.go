@@ -51,9 +51,9 @@ func main() {
 		to calculate top and left.
 	*/
 
-	//The whole array
+	//Move on x
 	for x := 0; x < len(arr)-pa+1; x++ {
-		//All lines
+		//Move on y
 		for y := 0; y < len(arr[x]); y++ {
 			//Right = r
 			var p int = 1
