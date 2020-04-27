@@ -13,7 +13,7 @@ func main() {
 	var gp int
 
 	for i := 0; i < len(n)-12; i++ {
-		//Don't need to calculate the products of the arrays that end with zero.
+		//Don't need to calculate the products of the arrays that ends with zero.
 		//if n[i+9] != 0 || n[i+10] != 0 || n[i+11] != 0 || n[i+12] != 0 {
 		if n[i+12] != 0 {
 			p = 1

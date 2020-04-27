@@ -4,13 +4,23 @@ import (
 	"fmt"
 )
 
-var count = 1000
+const count int = 1000
+
 var sum = 0
 
+//Refactored to add a function to check if it's divisible,
+//this is faster.
+func findDiv(n int) bool {
+	switch {
+	case n%3 == 0, n%5 == 0:
+		return true
+	}
+	return false
+}
+
 func main() {
-	for i := 0; i < count; i++ {
-		switch {
-		case i%3 == 0, i%5 == 0:
+	for i := 1; i < count; i++ {
+		if findDiv(i) {
 			sum += i
 		}
 	}

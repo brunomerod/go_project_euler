@@ -4,11 +4,11 @@ import (
 	"fmt"
 )
 
-/**
-*** Brute force. Multiples of 9 divisible by 20 first in array. I'm sure they
-*** will be divisible by 3,5, 9,10,20....!no
-*** Change of plans. IF % with 1-20.
-*** Nested fors
+/*
+* 	Brute force. Multiples of 9 divisible by 20 first in array. I'm sure they
+* 	will be divisible by 3,5, 9,10,20....!no
+* 	Change of plans. IF % with 1-20.
+* 	Nested fors n²
  */
 
 func main() {
@@ -42,6 +42,8 @@ func main() {
 		//If I use i = i + 20 it's really slower
 		i++
 	}
+
+	//Fors n²
 	for i := 1; ; i++ {
 		for n := 1; n <= 20; n++ {
 			if i%n != 0 {
